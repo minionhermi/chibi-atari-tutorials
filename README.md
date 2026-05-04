@@ -39,3 +39,19 @@ Die Quellen verwenden conditional assembly:
 
 - ChibiAkumas 6502 Tutorials: https://www.chibiakumas.com/6502/
 - Alle Quellen von der lokalen SMB-Kopie (\\ORANGE\hermiwrite\www.chibiakumas.com)
+
+## Testergebnisse (04.05.2026)
+
+| Tutorial | ROM | Status |
+|----------|-----|--------|
+| Hello World | `roms/hello52.rom` | ✅ Läuft, zeigt Text + Farben |
+| Bitmap | `roms/simple_bitmap.rom` | ✅ Läuft, rendert Grafik |
+| Joystick | `roms/simple_joy.rom` | ✅ Läuft, braucht Tastatureingabe |
+
+**Joystick-Test:** Das Gesicht bewegt sich nur mit Tastatureingabe (Pfeiltasten).
+Im Headless-Modus (Xvfb) ohne echten Input bleibt es statisch. Auf einem
+echten Desktop mit `-kbdjoy0` bewegt es sich.
+
+### Referenz-Screenshots
+`/opt/data/chibi-atari-tutorials/screenshots/` enthält die Soll-Zustände
+der Tutorials vom Entwickler getestet.
